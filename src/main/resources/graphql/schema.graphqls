@@ -1,0 +1,35 @@
+type Company{
+   id:ID!,
+ companyName:String,
+    ceo:String,
+    founder:String,
+    co_founder:String,
+    industryType:String,
+    totalValuation:Int
+}
+
+type Query{
+getAllCompany:[Company],
+ getSingleCompany(id:ID!):Company,
+
+
+}
+
+type Mutation{
+createCompany(
+    companyName:String,
+    ceo:String,
+ founder:String,
+ co_founder:String,
+ industryType:String,
+ totalValuation:Int
+):Company
+ deleteCompany(id:ID!):Boolean
+ updateCompany(id:ID!,    companyName:String,
+     ceo:String,
+     founder:String,
+     co_founder:String,
+     industryType:String,
+     totalValuation:Int):Company
+
+}
